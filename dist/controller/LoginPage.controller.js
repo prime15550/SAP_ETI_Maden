@@ -83,7 +83,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			var oBindingContext = oEvent.getSource().getBindingContext();
 
 			return new Promise(function(fnResolve) {
-				var i  = false ; 
+				var s  = false ; 
 				var email = "",soyad= "";
 				for(var i in kullanicilar)
 				{
@@ -91,15 +91,16 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 					
 					if(kull["_email"]==this.getView().byId("username").getValue()&&kull["_sifre"]==this.getView().byId("password").getValue())
 					{
+						
 						email =kull["_email"]
 						soyad =kull["_soyisim"]
 
-						i = true;
+						s = true;
 					}
 					
 					
 				}
-				if(i == true)
+				if(s == true)
 					{
 
 						this.oRouter.navTo("Menu_1",{email : email,soyad : soyad},false);

@@ -36,6 +36,8 @@
             <OverflowToolbar visible="true" enabled="true" width="auto" design="Transparent">
                 <content>
                     <ToolbarSpacer width=""/>
+                    <Button text="Ben Kimim" type="Reject" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="ac"/>
+
                     <Input id="ss1" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="50"/>
 
 

@@ -23,7 +23,7 @@
                                     <Label text="İsim Soyad" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
                                 </form:label>
                                 <form:fields>
-                                    <Text text="İsim Soyad Alanı" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                    <Input id="ad" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="50"/>
                                 </form:fields>
                             </form:FormElement>
                             <form:FormElement visible="true">
@@ -31,7 +31,7 @@
                                     <Label text="Firma" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
                                 </form:label>
                                 <form:fields>
-                                    <Text text="Firma Alanı" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                    <Input id="firma" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="50"/>
                                 </form:fields>
                             </form:FormElement>
                             <form:FormElement visible="true">
@@ -39,7 +39,7 @@
                                     <Label text="Tel No" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
                                 </form:label>
                                 <form:fields>
-                                    <Text text="Telefon Alanı" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                    <Input id="telefon" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="50"/>
                                 </form:fields>
                             </form:FormElement>
                             <form:FormElement visible="true">
@@ -47,7 +47,7 @@
                                     <Label text="Email" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
                                 </form:label>
                                 <form:fields>
-                                    <Text text="Email Alanı" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                    <Input id="email" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="50"/>
                                 </form:fields>
                             </form:FormElement>
                         </form:formElements>
@@ -63,6 +63,8 @@
             <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
                 <content>
                     <ToolbarSpacer width=""/>
+                    <Button text="BilgileriAl" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="Yukle"/>
+
                     <Button text="Düzenle" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
                 </content>
             </OverflowToolbar>

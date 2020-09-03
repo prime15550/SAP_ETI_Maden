@@ -8,7 +8,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 ], function(BaseController, MessageBox, Popover2, Utilities, History) {
 	"use strict";
 	var data,kullanicilar,kull ; 
-	var email,soyad,telefon,firma,isim;
+	var email,soyad,telefon,firma,isim,s=0;
 
 	return BaseController.extend("com.sap.build.standard.etiMaden.controller.Menu_1", {
 		handleRouteMatched: function(oEvent) {
@@ -257,6 +257,34 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 		}, OnExit :function()
 		{
 			this.getView().destroy();
+		},ac : function()
+		{
+			if(s%2==0)
+			{
+
+			
+			for(var i in kullanicilar)
+				{
+					
+					kull = kullanicilar[i]; 
+					
+					if(kull["_email"]==email)
+					{
+						isim = kull["_isim"]+" "+kull["_soyisim"];	
+						this.getView().byId("ss1").setValue(isim);	
+		
+						
+						break; 
+					}	
+					
+				}
+				s++;
+			}else
+			{
+				this.getView().byId("ss1").setValue(email);	
+				s++;
+
+			}
 		},
 		/*onBeforeRendering:function () {
 			var sHash = window.location.hash;
@@ -326,21 +354,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 				kullanicilar = data["users"];
 				
 				oVieww.setModel(oModell, "fragmentModel");
-				
-				for(var i in kullanicilar)
-				{
-					
-					kull = kullanicilar[i]; 
-					
-					if(kull["_email"]==email)
-					{
-						isim = kull["_isim"];	
-								
-						
-						break; 
-					}	
-					
-				}
+			
 				
 			});
 			this.getView().byId("ss1").setValue(email);	

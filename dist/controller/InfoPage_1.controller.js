@@ -4,7 +4,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 	"sap/ui/core/routing/History"
 ], function(BaseController, MessageBox, Utilities, History) {
 	"use strict";
-	var email;
+	var email,data,kullanicilar,s=0,kull;
 
 	return BaseController.extend("com.sap.build.standard.etiMaden.controller.InfoPage_1", {
 		handleRouteMatched: function(oEvent) {
@@ -144,7 +144,43 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			 email = t[2]; 
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			this.oRouter.getTarget("InfoPage_1").attachDisplay(jQuery.proxy(this.handleRouteMatched, this));
-			this.getView().byId("ss1").setValue(email);	
+			var oVieww = this.getView();
+			var oModel2 = new sap.ui.model.json.JSONModel();
+				oModel2.loadData("https://servereti.herokuapp.com/genelveri"); 
+				oModel2.attachRequestCompleted(function () {
+					data= JSON.parse(oModel2.getJSON());
+					kullanicilar = data["users"];
+				})
+				this.getView().byId("ss1").setValue(email);	
+
+
+		},Yukle: function()
+		{
+			var s =0;
+
+			for(var i in kullanicilar)
+				{
+					
+					s++;
+				}
+					
+				for(var x=0;x<s;x++)
+				{
+					if(kullanicilar[x]["_email"]==email)
+					{
+						
+					var text =kullanicilar[x]["_isim"]+" "+(kullanicilar[x]["_soyisim"]);
+				this.getView().byId("ad").setValue(text);	
+				this.getView().byId("firma").setValue(kullanicilar[x]["_firma"]);	
+				this.getView().byId("telefon").setValue(kullanicilar[x]["_telefon"]);	
+				this.getView().byId("email").setValue(kullanicilar[x]["_email"]);
+
+						
+					}
+				}
+				
+				
+
 
 		}
 	});
