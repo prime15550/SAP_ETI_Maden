@@ -1,0 +1,283 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "com.sap.build.standard.etiMaden",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.2.2"
+		},
+		"dataSources": {},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"ach": "ach",
+		"resources": "resources.json",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.32.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"_version": "1.3.0",
+		"rootView": {
+			"viewName": "generated.app.view.EditInfo",
+			"type": "XML"
+			
+
+		},
+		"dependencies": {
+			"minUI5Version": "1.50.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"dataModel3": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/data.json"
+			}
+		},
+		"resources": {
+			"css": []
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.sap.build.standard.etiMaden.view",
+				"controlId": "App",
+				"clearTarget": false,
+				"async": true,
+				"controlAggregation": "pages",
+				"bypassed": {
+					"target": [
+						"StartPage_1"
+					]
+				}
+			},
+			"targets": {
+				"StartPage_1": {
+					"controlAggregation": "pages",
+					"viewName": "StartPage_1",
+					"viewId": "StartPage_1",
+					"viewLevel": 1,
+					"transition": "fade"
+				},
+				"LoginPage": {
+					"controlAggregation": "pages",
+					"viewName": "LoginPage",
+					"viewId": "LoginPage",
+					"viewLevel": 1,
+					"transition": "fade"
+				},
+				"Menu_1": {
+					"controlAggregation": "pages",
+					"viewName": "Menu_1",
+					"viewId": "Menu_1",
+					"viewLevel": 1,
+					"transition": "fade",
+					"async" : true
+				},
+				"ContactPage": {
+					"controlAggregation": "pages",
+					"viewName": "ContactPage",
+					"viewId": "ContactPage",
+					"viewLevel": 1,
+					"transition": "fade"
+				},
+				"OrderPage": {
+					"controlAggregation": "pages",
+					"viewName": "OrderPage",
+					"viewId": "OrderPage",
+					"viewLevel": 1,
+					"transition": "fade"
+				},
+				"BasketPage": {
+					"controlAggregation": "pages",
+					"viewName": "BasketPage",
+					"viewId": "BasketPage",
+					"viewLevel": 1,
+					"transition": "fade"
+				},
+				"UnderConstruction_1": {
+					"controlAggregation": "pages",
+					"viewName": "UnderConstruction_1",
+					"viewId": "UnderConstruction_1",
+					"viewLevel": 1,
+					"transition": "fade"
+				},
+				"InfoPage_1": {
+					"controlAggregation": "pages",
+					"viewName": "InfoPage_1",
+					"viewId": "InfoPage_1",
+					"viewLevel": 1,
+					"transition": "fade"
+				},
+				"EditInfo": {
+					"controlAggregation": "pages",
+					"viewName": "EditInfo",
+					"viewId": "EditInfo",
+					"viewLevel": 1,
+					"transition": "fade"
+				},
+				"KonteynerPage": {
+					"controlAggregation": "pages",
+					"viewName": "KonteynerPage",
+					"viewId": "KonteynerPage",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"ReviewPage": {
+					"controlAggregation": "pages",
+					"viewName": "ReviewPage",
+					"viewId": "ReviewPage",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"GemiParsiyel": {
+					"controlAggregation": "pages",
+					"viewName": "GemiParsiyel",
+					"viewId": "GemiParsiyel",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"OzetEkrani": {
+					"controlAggregation": "pages",
+					"viewName": "OzetEkrani",
+					"viewId": "OzetEkrani",
+					"viewLevel": 2,
+					"transition": "slide"
+				}
+				
+			},
+			"routes": [
+				{
+					"pattern": "StartPage_1/:context:",
+					"name": "StartPage_1",
+					"target": [
+						"StartPage_1"
+					]
+				},
+				{
+					"pattern": "",
+					"name": "default",
+					"target": [
+						"StartPage_1"
+					]
+				},
+				{
+					"pattern": "LoginPage/:context:",
+					"name": "LoginPage",
+					"target": [
+						"LoginPage"
+					]
+				},
+				{
+					"pattern": "Menu_1/:context:{email}",
+					"name": "Menu_1",
+					"target": [
+						"Menu_1"
+					]
+				},
+				{
+					"pattern": "ContactPage/:context:{email}",
+					"name": "ContactPage",
+					"target": [
+						"ContactPage"
+					]
+				},
+				{
+					"pattern": "OrderPage/:context:{email}",
+					"name": "OrderPage",
+					"target": [
+						"OrderPage"
+					]
+				},
+				{
+					"pattern": "BasketPage/:context:{email}",
+					"name": "BasketPage",
+					"target": [
+						"BasketPage"
+					]
+				},
+				{
+					"pattern": "UnderConstruction_1/:context:",
+					"name": "UnderConstruction_1",
+					"target": [
+						"UnderConstruction_1"
+					]
+				},
+				{
+					"pattern": "InfoPage_1/:context:{email}",
+					"name": "InfoPage_1",
+					"target": [
+						"InfoPage_1"
+					]
+				},
+				{
+					"pattern": "EditInfo/:context:{email}",
+					"name": "EditInfo",
+					"target": [
+						"EditInfo"
+					]
+				},
+				{
+					"pattern": "ReviewPage/:context:{email}",
+					"name": "ReviewPage",
+					"target": [
+						"ReviewPage"
+					]
+				},
+				{
+					"pattern": "KonteynerPage/:context:{email}",
+					"name": "KonteynerPage",
+					"target": [
+						"KonteynerPage"
+					]
+				},
+				{
+					"pattern": "GemiParsiyel/:context:{email}",
+					"name": "GemiParsiyel",
+					"target": [
+						"GemiParsiyel"
+					]
+				},
+				{
+					"pattern": "OzetEkrani/:context:{email}",
+					"name": "OzetEkrani",
+					"target": [
+						"OzetEkrani"
+					]
+				}
+			]
+		}
+	}
+}

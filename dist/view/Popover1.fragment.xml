@@ -1,0 +1,17 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" controllerName="com.sap.build.standard.etiMaden.controller.Popover1" xmlns="sap.m">
+    <ResponsivePopover contentHeight="350px" contentWidth="250px" horizontalScrolling="false" modal="false" offsetX="0" offsetY="0" placement="Right" showHeader="true" title="Menu" verticalScrolling="false" visible="true" showCloseButton="true">
+        <content>
+            <List width="100%">
+                <items>
+                    <ActionListItem text="Sil" visible="true"/>
+                    <ActionListItem text="Düzenle" visible="true"/>
+                    <ActionListItem text="Onayla" visible="true"/>
+                </items>
+            </List>
+        </content>
+        <beginButton/>
+        <customHeader/>
+        <endButton/>
+        <subHeader/>
+    </ResponsivePopover>
+</core:FragmentDefinition>

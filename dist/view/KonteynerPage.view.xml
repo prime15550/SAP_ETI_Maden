@@ -1,0 +1,762 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.etiMaden.controller.KonteynerPage" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core">
+    <Page title="ETI MADEN KONTEYNER SIPARIS TALEBI" showHeader="true" showFooter="true" showNavButton="false" >
+        <content>
+            <Wizard finishButtonText="Önizle" width="auto" height="auto" complete="_onWizardComplete">
+                <steps>
+                    <WizardStep title="Genel Bilgi" icon="" validated="true">
+                        <content>
+                            <form:Form width="100%" editable="true" visible="true">
+                                <form:title/>
+                                <form:formContainers>
+                                    <form:FormContainer visible="true">
+                                        <form:formElements>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="İsim" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input id="sap_Wizard_Page_0-content-sap_m_Wizard-1-steps-sap_m_WizardStep-1-content-build_simple_form_Form-1598707009913-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1-fields-sap_m_Input-1" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="true" valueStateText="İsim Giriniz" maxLength="0"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Soyad" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input id="sap_Wizard_Page_0-content-sap_m_Wizard-1-steps-sap_m_WizardStep-1-content-build_simple_form_Form-1598707009913-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-2-fields-sap_m_Input-1598707121110" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="true" valueStateText="Soyad Giriniz"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Sipariş No" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input id="sap_Wizard_Page_0-content-sap_m_Wizard-1-steps-sap_m_WizardStep-1-content-build_simple_form_Form-1598707009913-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-3-fields-sap_m_Input-1598707198614" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="true" valueStateText="Sipariş No Giriniz" maxLength="0"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Sektör" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input id="sektIN" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                        </form:formElements>
+                                        <form:title/>
+                                    </form:FormContainer>
+                                </form:formContainers>
+                                <form:layout>
+                                    <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                                </form:layout>
+                            </form:Form>
+                        </content>
+                    </WizardStep>
+                    <WizardStep title="Ürün Bilgileri" icon="" validated="true">
+                        <content>
+                            <form:Form width="100%" editable="true" visible="true">
+                                <form:title/>
+                                <form:formContainers>
+                                    <form:FormContainer visible="true">
+                                        <form:formElements>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Ürün" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true" />
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox  xmlns="sap.m" id="box0" editable="true" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true">
+                                                        <items>
+                                                            <core:Item text="ETİBOR - 48 (B. PENTA)" enabled="true" key="ETİBOR - 48 (B. PENTA)"/>
+                                                            <core:Item text="ÖĞÜTÜLMÜŞ KOLEMANİT (-75 MİKRON)" enabled="true" key="ÖĞÜTÜLMÜŞ KOLEMANİT (-75 MİKRON)"/>
+                                                            <core:Item text="ÖĞÜTÜLMÜŞ KOLEMANİT (-45 MİKRON)" enabled="true" key="ÖĞÜTÜLMÜŞ KOLEMANİT (-45 MİKRON)"/>
+                                                            <core:Item text="BORIK ASİT (KRİSTAL)" enabled="true" key="BORIK ASİT (KRİSTAL)"/>
+                                                            <core:Item text="BORIK ASİT (DÜŞÜK SÜLFAT)" enabled="true" key="BORIK ASİT (DÜŞÜK SÜLFAT)"/>
+                                                            <core:Item text="BORIK ASİT (TOZ)" enabled="true" key="BORIK ASİT (TOZ)"/>
+                                                            <core:Item text="BORAKS DEKAHİDRAT KRİSTAL" enabled="true" key="BORAKS DEKAHİDRAT KRİSTAL"/>
+                                                            <core:Item text="ÖĞÜTÜLMÜŞ ÜLEKSİT (-75 MIKRON)" enabled="true" key="ÖĞÜTÜLMÜŞ ÜLEKSİT (-75 MIKRON)"/>
+                                                            <core:Item text="ÖĞÜTÜLMÜŞ ÜLEKSİT (-45 MIKRON)" enabled="true" key="ÖĞÜTÜLMÜŞ ÜLEKSİT (-45 MIKRON)"/>
+                                                            <core:Item text="ETIBOR-68 SUSUZ BORAKS" enabled="true" key="ETIBOR-68 SUSUZ BORAKS"/>
+                                                            <core:Item text="ETI DOT-67" enabled="true" key="ETI DOT-67"/>
+                                                            <core:Item text="BOR OKSİT" enabled="true" key="BOR OKSİT"/>
+                                                            <core:Item text="KALSİNE TİNKAL" enabled="true" key="KALSİNE TİNKAL"/>
+                                                            <core:Item text="KONS.ULEKSIT BIG (+3 MM)" enabled="true" key="KONS.ULEKSIT BIG (+3 MM)"/>
+                                                            <core:Item text="KONS.ULEKSIT BIG (-3 MM)" enabled="true" key="KONS.ULEKSIT BIG (-3 MM)"/>
+                                                            <core:Item text="KONS. BIG. KOLEMANIT (3-25MM)" enabled="true" key="KONS. BIG. KOLEMANIT (3-25MM)"/>
+                                                            <core:Item text="KONS. BIG.KOLEMANIT(25-125MM)" enabled="true" key="KONS. BIG.KOLEMANIT(25-125MM)"/>
+                                                            <core:Item text="KONS. HIS.KOLEMANIT (3-25MM)" enabled="true" key="KONS. HIS.KOLEMANIT (3-25MM)"/>
+                                                            <core:Item text="KONS. HIS.KOLEMANIT (25-100MM)" enabled="true" key="KONS. HIS.KOLEMANIT (25-100MM)"/>
+                                                            <core:Item text="KONS. KES. KOLEMANIT (-3 MM)" enabled="true" key="KONS. KES. KOLEMANIT (-3 MM)"/>
+                                                            <core:Item text="KONS. KES. KOLEMANIT (3-100 MM)" enabled="true" key="KONS. KES. KOLEMANIT (3-100 MM)"/>
+                                                            <core:Item text="KONS. KES. KOLEMANIT (25-100 MM)" enabled="true" key="KONS. KES. KOLEMANIT (25-100 MM)"/>
+                                                            <core:Item text="BORAKS DEKAHİDRAT TOZ" enabled="true" key="BORAKS DEKAHİDRAT TOZ"/>
+                                                            <core:Item text="KONS. KES.KOLEMANIT (3-25 MM)" enabled="true" key="KONS. KES.KOLEMANIT (3-25 MM)"/>
+                                                            <core:Item text="KALSİNE KOLEMANİT" enabled="true" key="KALSİNE KOLEMANİT"/>
+                                                            <core:Item text="test2" enabled="true" key="test2"/>
+                                                            <core:Item text="GRANÜL ÜLEK. KONS. (2-4 MM)" enabled="true" key="GRANÜL ÜLEK. KONS. (2-4 MM)"/>
+                                                            <core:Item text="ETİBORON-SERAMIK" enabled="true" key="ETİBORON-SERAMIK"/>
+                                                            <core:Item text="GRANÜL KOL KONS. (2-4 MM)" enabled="true" key="GRANÜL KOL KONS. (2-4 MM)"/>
+                                                            <core:Item text="ETİMATİK" enabled="true" key="ETİMATİK"/>
+                                                            <core:Item text="ETIBOR-48 (2-4 MM)" enabled="true" key="ETIBOR-48 (2-4 MM)"/>
+                                                            <core:Item text="ETİBOR-48 (BORLU SODA)" enabled="true" key="ETİBOR-48 (BORLU SODA)"/>
+                                                            <core:Item text="KOL. HİSARCIK KONS. (0-3 MM)" enabled="true" key="KOL. HİSARCIK KONS. (0-3 MM)"/>
+                                                            <core:Item text="ÜLEKSİT (-25 MM)" enabled="true" key="ÜLEKSİT (-25 MM)"/>
+                                                            <core:Item text="SUSUZ BORAKS TOZ" enabled="true" key="SUSUZ BORAKS TOZ"/>
+                                                            <core:Item text="ETİBOR - 48 (B. PENTA) DÖKME" enabled="true" key="ETİBOR - 48 (B. PENTA) DÖKME"/>
+                                                            <core:Item text="ETİBOR - 48 (B. PENTA) PAKETLİ" enabled="true" key="ETİBOR - 48 (B. PENTA) PAKETLİ"/>
+                                                            <core:Item text="ÖĞÜTÜLMÜŞ KOLEMANİT DÖKME" enabled="true" key="ÖĞÜTÜLMÜŞ KOLEMANİT DÖKME"/>
+                                                            <core:Item text="ÖĞÜTÜLMÜŞ KOLEMANİT PAKETLİ" enabled="true" key="ÖĞÜTÜLMÜŞ KOLEMANİT PAKETLİ"/>
+                                                            <core:Item text="BORİK ASİT (KRİSTAL) DÖKME" enabled="true" key="BORİK ASİT (KRİSTAL) DÖKME"/>
+                                                            <core:Item text="BORİK ASİT (KRİSTAL) PAKETLİ" enabled="true" key="BORİK ASİT (KRİSTAL) PAKETLİ"/>
+                                                            <core:Item text="BORİK ASİT (TOZ) DÖKME" enabled="true" key="BORİK ASİT (TOZ) DÖKME"/>
+                                                            <core:Item text="BORİK ASİT (TOZ) PAKETLİ" enabled="true" key="BORİK ASİT (TOZ) PAKETLİ"/>
+                                                            <core:Item text="BORAKS DEKAHİDRAT KRİSTAL DÖKME" enabled="true" key="BORAKS DEKAHİDRAT KRİSTAL DÖKME"/>
+                                                            <core:Item text="BORAKS DEKAHİDRAT KRİSTAL PAKETLİ" enabled="true" key="BORAKS DEKAHİDRAT KRİSTAL PAKETLİ"/>
+                                                            <core:Item text="ÖĞÜTÜLMÜŞ ÜLEKSİT DÖKME" enabled="true" key="ÖĞÜTÜLMÜŞ ÜLEKSİT DÖKME"/>
+                                                            <core:Item text="ÖĞÜTÜLMÜŞ ÜLEKSİT PAKETLİ" enabled="true" key="ÖĞÜTÜLMÜŞ ÜLEKSİT PAKETLİ"/>
+                                                            <core:Item text="ETİBOR-68 SUSUZ BORAKS DÖKME" enabled="true" key="ETİBOR-68 SUSUZ BORAKS DÖKME"/>
+                                                            <core:Item text="ETİBOR-68 SUSUZ BORAKS PAKETLİ" enabled="true" key="ETİBOR-68 SUSUZ BORAKS PAKETLİ"/>
+                                                            <core:Item text="ETI DOT-67 DÖKME" enabled="true" key="ETI DOT-67 DÖKME"/>
+                                                            <core:Item text="ETI DOT-67 PAKETLİ" enabled="true" key="ETI DOT-67 PAKETLİ"/>
+                                                            <core:Item text="BOR OKSİT PAKETLİ" enabled="true" key="BOR OKSİT PAKETLİ"/>
+                                                            <core:Item text="KALSİNE TİNKAL DÖKME" enabled="true" key="KALSİNE TİNKAL DÖKME"/>
+                                                            <core:Item text="KALSİNE TİNKAL PAKETLİ" enabled="true" key="KALSİNE TİNKAL PAKETLİ"/>
+                                                            <core:Item text="KONS.ULEKSIT BIG DÖKME" enabled="true" key="KONS.ULEKSIT BIG DÖKME"/>
+                                                            <core:Item text="KONS.ULEKSIT BIG PAKETLİ" enabled="true" key="KONS.ULEKSIT BIG PAKETLİ"/>
+                                                            <core:Item text="KONS. BIG. KOLEMANIT DÖKME" enabled="true" key="KONS. BIG. KOLEMANIT DÖKME"/>
+                                                            <core:Item text="KONS. BIG. KOLEMANIT PAKETLİ" enabled="true" key="KONS. BIG. KOLEMANIT PAKETLİ"/>
+                                                            <core:Item text="KONS. HIS.KOLEMANIT DÖKME" enabled="true" key="KONS. HIS.KOLEMANIT DÖKME"/>
+                                                            <core:Item text="KONS. HIS.KOLEMANIT PAKETLİ" enabled="true" key="KONS. HIS.KOLEMANIT PAKETLİ"/>
+                                                            <core:Item text="KONS. KES. KOLEMANIT DÖKME" enabled="true" key="KONS. KES. KOLEMANIT DÖKME"/>
+                                                            <core:Item text="KONS. KES. KOLEMANIT PAKETLİ" enabled="true" key="KONS. KES. KOLEMANIT PAKETLİ"/>
+                                                            <core:Item text="BORAKS DEKAHİDRAT TOZ DÖKME" enabled="true" key="BORAKS DEKAHİDRAT TOZ DÖKME"/>
+                                                            <core:Item text="BORAKS DEKAHİDRAT TOZ PAKETLİ" enabled="true" key="BORAKS DEKAHİDRAT TOZ PAKETLİ"/>
+                                                            <core:Item text="KALSİNE KOLEMANİT DÖKME" enabled="true" key="KALSİNE KOLEMANİT DÖKME"/>
+                                                            <core:Item text="KALSİNE KOLEMANİT PAKETLİ" enabled="true" key="KALSİNE KOLEMANİT PAKETLİ"/>
+                                                            <core:Item text="GRANÜL ÜLEK. KONS. DÖKME" enabled="true" key="GRANÜL ÜLEK. KONS. DÖKME"/>
+                                                            <core:Item text="GRANÜL ÜLEK. KONS. PAKETLİ" enabled="true" key="GRANÜL ÜLEK. KONS. PAKETLİ"/>
+                                                            <core:Item text="ETİBORON-SERAMIK DÖKME" enabled="true" key="ETİBORON-SERAMIK DÖKME"/>
+                                                            <core:Item text="ETİBORON-SERAMIK PAKETLİ" enabled="true" key="ETİBORON-SERAMIK PAKETLİ"/>
+                                                            <core:Item text="GRANÜL KOL KONS. DÖKME" enabled="true" key="GRANÜL KOL KONS. DÖKME"/>
+                                                            <core:Item text="GRANÜL KOL KONS. PAKETLİ" enabled="true" key="GRANÜL KOL KONS. PAKETLİ"/>
+                                                            <core:Item text="ETİBOR-48 (BORLU SODA) DÖKME" enabled="true" key="ETİBOR-48 (BORLU SODA) DÖKME"/>
+                                                            <core:Item text="ETİBOR-48 (BORLU SODA) PAKETLİ" enabled="true" key="ETİBOR-48 (BORLU SODA) PAKETLİ"/>
+                                                            <core:Item text="SUSUZ BORAKS TOZ DÖKME" enabled="true" key="SUSUZ BORAKS TOZ DÖKME"/>
+                                                            <core:Item text="ETİBOR - 48 TOZ (B. PENTA) PAKETLİ" enabled="true" key="ETİBOR - 48 TOZ (B. PENTA) PAKETLİ"/>
+                                                            <core:Item text="BORAKS PENTA HİDRAT PAKETLİ" enabled="true" key="BORAKS PENTA HİDRAT PAKETLİ"/>
+                                                            <core:Item text="KALSİNE PİRİT" enabled="true" key="KALSİNE PİRİT"/>
+                                                            <core:Item text="ETİBOR-48 KİRLİ DÖKME" enabled="true" key="ETİBOR-48 KİRLİ DÖKME"/>
+                                                            <core:Item text="ETİBOR-48 KİRLİ PAKETLİ" enabled="true" key="ETİBOR-48 KİRLİ PAKETLİ"/>
+                                                            <core:Item text="ETİMATİK PAKETLİ 300gr" enabled="true" key="ETİMATİK PAKETLİ 300gr"/>
+                                                            <core:Item text="ETİMATİK PAKETLİ 500gr" enabled="true" key="ETİMATİK PAKETLİ 500gr"/>
+                                                            <core:Item text="ETİMATİK PAKETLİ 1kg" enabled="true" key="ETİMATİK PAKETLİ 1kg"/>
+                                                            <core:Item text="ETİMATİK PAKETLİ 1.5kg" enabled="true" key="ETİMATİK PAKETLİ 1.5kg"/>
+                                                            <core:Item text="ETİMATİK PAKETLİ 3kg" enabled="true" key="ETİMATİK PAKETLİ 3kg"/>
+                                                            <core:Item text="ETİMATİK PAKETLİ 5kg" enabled="true" key="ETİMATİK PAKETLİ 5kg"/>
+                                                            <core:Item text="ETİMATİK PAKETLİ 20kg" enabled="true" key="ETİMATİK PAKETLİ 20kg"/>
+                                                            <core:Item text="ÇİNKO BORAT PAKETLİ" enabled="true" key="ÇİNKO BORAT PAKETLİ"/>
+                                                            <core:Item text="ETIFERT-B11" enabled="true" key="ETIFERT-B11"/>
+                                                            <core:Item text="ETIFERT-B15" enabled="true" key="ETIFERT-B15"/>
+                                                            <core:Item text="ETIFERT-B17" enabled="true" key="ETIFERT-B17"/>
+                                                            <core:Item text="ETIFERT-B20" enabled="true" key="ETIFERT-B20"/>
+                                                            <core:Item text="KONS. ESP.KOLEMANIT DÖKME" enabled="true" key="KONS. ESP.KOLEMANIT DÖKME"/>
+                                                            <core:Item text="KONS. ESP.KOLEMANIT PAKETLİ" enabled="true" key="KONS. ESP.KOLEMANIT PAKETLİ"/>
+                                                            <core:Item text="KONS. ESP.KOLEMANIT (3-25MM)" enabled="true" key="KONS. ESP.KOLEMANIT (3-25MM)"/>
+                                                            <core:Item text="KONS. ESP.KOLEMANIT (25-100MM)" enabled="true" key="KONS. ESP.KOLEMANIT (25-100MM)"/>
+                                                            <core:Item text="ETIBOR-68, TOZ, (SUSUZ BORAKS), PAKETLI" enabled="true" key="ETIBOR-68, TOZ, (SUSUZ BORAKS), PAKETLI"/>
+                                                            <core:Item text="ETİCOL 43,PAKETLİ" enabled="true" key="ETİCOL 43,PAKETLİ"/>
+                                                            <core:Item text="BOR OKSİT PAKETLİ" enabled="true" key="BOR OKSİT PAKETLİ"/>
+                                                            <core:Item text="ETİ-KBOR DÖKME" enabled="true" key="ETİ-KBOR DÖKME"/>
+                                                            <core:Item text="ETİ-KBOR PAKETLİ" enabled="true" key="ETİ-KBOR PAKETLİ"/>
+                                                            <core:Item text="ABCOL3367 DÖKME" enabled="true" key="ABCOL3367 DÖKME"/>
+                                                            <core:Item text="ABCOL3367 PAKETLİ" enabled="true" key="ABCOL3367 PAKETLİ"/>
+                                                            <core:Item text="ETİ-KDOT, KRİSTAL, PAKETLİ" enabled="true" key="ETİ-KDOT, KRİSTAL, PAKETLİ"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Teslim Şekli" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox xmlns="sap.m" id="box1" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                            <core:Item text="CFR-c. f." enabled="true" key="CFR-c. f."/>
+                                                            <core:Item text="CIF-c.i.f." enabled="true" key="CIF-c.i.f."/>
+                                                            <core:Item text="CIP-Navlunsuz sigortalı" enabled="true" key="CIP-Navlunsuz sigortalı"/>
+                                                            <core:Item text="CPT-Navlunsuz" enabled="true" key="CPT-Navlunsuz"/>
+                                                            <core:Item text="DAF-Sınırdan gönderildi" enabled="true" key="DAF-Sınırdan gönderildi"/>
+                                                            <core:Item text="DAP-Belirtilen Yerde Teslim" enabled="true" key="DAP-Belirtilen Yerde Teslim"/>
+                                                            <core:Item text="DDP-GV ödenmiş olarak gönderildi" enabled="true" key="DDP-GV ödenmiş olarak gönderildi"/>
+                                                            <core:Item text="DDU-GV ödenmemiş olarak gönderildi" enabled="true" key="DDU-GV ödenmemiş olarak gönderildi"/>
+                                                            <core:Item text="DEQ-Rıhtımdan gönderildi-GV ödendi" enabled="true" key="DEQ-Rıhtımdan gönderildi-GV ödendi"/>
+                                                            <core:Item text="DES-Gemiden gönderildi" enabled="true" key="DES-Gemiden gönderildi"/>
+                                                            <core:Item text="EXW-Üretim yerinden" enabled="true" key="EXW-Üretim yerinden"/>
+                                                            <core:Item text="FAS-f.a.s." enabled="true" key="FAS-f.a.s."/>
+                                                            <core:Item text="FCA-Navlunsuz" enabled="true" key="FCA-Navlunsuz"/>
+                                                            <core:Item text="FH-Free house" enabled="true" key="FH-Free house"/>
+                                                            <core:Item text="FOB-f.o.b" enabled="true" key="FOB-f.o.b"/>
+                                                            <core:Item text="UN-Bloke" enabled="true" key="UN-Bloke"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                        </form:formElements>
+                                        <form:title/>
+                                    </form:FormContainer>
+                                </form:formContainers>
+                                <form:layout>
+                                    <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                                </form:layout>
+                            </form:Form>
+                        </content>
+                    </WizardStep>
+                    <WizardStep title="Sevkiyat Bilgileri" icon="" validated="true">
+                        <content>
+                            <form:Form width="100%" editable="true" visible="true">
+                                <form:title/>
+                                <form:formContainers>
+                                    <form:FormContainer visible="true">
+                                        <form:formElements>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Paketleme" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox  xmlns="sap.m" id="box2" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                            <core:Item text="20 KG" enabled="true" key="20 KG"/>
+                                                            <core:Item text="24 KG" enabled="true" key="24 KG"/>
+                                                            <core:Item text="25 KG" enabled="true" key="25 KG"/>
+                                                            <core:Item text="30 KG" enabled="true" key="30 KG"/>
+                                                            <core:Item text="50 KG" enabled="true" key="50 KG"/>
+                                                            <core:Item text="400 KG BIG BAG" enabled="true" key="400 KG BIG BAG"/>
+                                                            <core:Item text="500 KG BIG BAG" enabled="true" key="500 KG BIG BAG"/>
+                                                            <core:Item text="600 KG BIG BAG" enabled="true" key="600 KG BIG BAG"/>
+                                                            <core:Item text="900 KG BIG BAG" enabled="true" key="900 KG BIG BAG"/>
+                                                            <core:Item text="950 KG BIG BAG" enabled="true" key="950 KG BIG BAG"/>
+                                                            <core:Item text="1000 KG BIG BAG" enabled="true" key="1000 KG BIG BAG"/>
+                                                            <core:Item text="1050 KG BIG BAG" enabled="true" key="1050 KG BIG BAG"/>
+                                                            <core:Item text="1090 KG BIG BAG" enabled="true" key="1090 KG BIG BAG"/>
+                                                            <core:Item text="1100 KG BIG BAG" enabled="true" key="1100 KG BIG BAG"/>
+                                                            <core:Item text="1200 KG BIG BAG" enabled="true" key="1200 KG BIG BAG"/>
+                                                            <core:Item text="1250 KG BIG BAG" enabled="true" key="1250 KG BIG BAG"/>
+                                                            <core:Item text="2000 KG BIG BAG" enabled="true" key="2000 KG BIG BAG"/>
+                                                            <core:Item text="2100 KG BIG BAG" enabled="true" key="2100 KG BIG BAG"/>
+                                                            <core:Item text="GEMI IÇINE DÖKME" enabled="true" key="GEMI IÇINE DÖKME"/>
+                                                            <core:Item text="KONTEYNER IÇINE DÖKME" enabled="true" key="KONTEYNER IÇINE DÖKME"/>
+                                                            <core:Item text="KAMYON IÇINE DÖKME" enabled="true" key="KAMYON IÇINE DÖKME"/>
+                                                            <core:Item text="1150 KG BIG BAG" enabled="true" key="1150 KG BIG BAG"/>
+                                                            <core:Item text="680 KG BIG BAG" enabled="true" key="680 KG BIG BAG"/>
+                                                            <core:Item text="SILOBUS KONTEYNER DÖKME" enabled="true" key="SILOBUS KONTEYNER DÖKME"/>
+                                                            <core:Item text="SILOBUS KAMYON DÖKME" enabled="true" key="SILOBUS KAMYON DÖKME"/>
+                                                            <core:Item text="CEVHER VAGON DÖKME" enabled="true" key="CEVHER VAGON DÖKME"/>
+                                                            <core:Item text="UG VAGON DÖKME" enabled="true" key="UG VAGON DÖKME"/>
+                                                            <core:Item text="SILOBAS KONTEYNER VAGON" enabled="true" key="SILOBAS KONTEYNER VAGON"/>
+                                                            <core:Item text="KONTEYNER VAGON" enabled="true" key="KONTEYNER VAGON"/>
+                                                            <core:Item text="200 KG BIG BAG" enabled="true" key="200 KG BIG BAG"/>
+                                                            <core:Item text="700 KG BIG BAG" enabled="true" key="700 KG BIG BAG"/>
+                                                            <core:Item text="5 KG" enabled="true" key="5 KG"/>
+                                                            <core:Item text="10 KG" enabled="true" key="10 KG"/>
+                                                            <core:Item text="800 KG BIG BAG" enabled="true" key="800 KG BIG BAG"/>
+                                                            <core:Item text="15 KG" enabled="true" key="15 KG"/>
+                                                            <core:Item text="750 KG BIG BAG" enabled="true" key="750 KG BIG BAG"/>
+                                                            <core:Item text="300 KG BIG BAG" enabled="true" key="300 KG BIG BAG"/>
+                                                            <core:Item text="1300 KG BIG BAG" enabled="true" key="1300 KG BIG BAG"/>
+                                                            <core:Item text="440 KG BIG BAG" enabled="true" key="440 KG BIG BAG"/>
+                                                            <core:Item text="4 KG" enabled="true" key="4 KG"/>
+                                                            <core:Item text="907 KG BIG BAG" enabled="true" key="907 KG BIG BAG"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                    <ComboBox xmlns="sap.m" id="box3" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                        <core:Item text="1050 KG" enabled="true" key="1050 KG"/>
+                                                            <core:Item text="350 KG" enabled="true" key="350 KG"/>
+                                                            <core:Item text="500 KG" enabled="true" key="500 KG"/>
+                                                            <core:Item text="200 KG" enabled="true" key="200 KG"/>
+                                                            <core:Item text="150 KG" enabled="true" key="150 KG"/>
+                                                            <core:Item text="125 KG" enabled="true" key="125 KG"/>
+                                                            <core:Item text="800 KG" enabled="true" key="800 KG"/>
+                                                            <core:Item text="400 KG" enabled="true" key="400 KG"/>
+                                                            <core:Item text="850 KG" enabled="true" key="850 KG"/>
+                                                            <core:Item text="250 KG" enabled="true" key="250 KG"/>
+                                                            <core:Item text="300 KG" enabled="true" key="300 KG"/>
+                                                            <core:Item text="1200 KG" enabled="true" key="1200 KG"/>
+                                                            <core:Item text="650 KG" enabled="true" key="650 KG"/>
+                                                            <core:Item text="950 KG" enabled="true" key="950 KG"/>
+                                                            <core:Item text="100 KG" enabled="true" key="100 KG"/>
+                                                            <core:Item text="50 KG" enabled="true" key="50 KG"/>
+                                                            <core:Item text="25 KG" enabled="true" key="25 KG"/>
+                                                            <core:Item text="5 KG" enabled="true" key="5 KG"/>
+                                                            <core:Item text="10 KG" enabled="true" key="10 KG"/>
+                                                            <core:Item text="15 KG" enabled="true" key="15 KG"/>
+                                                            <core:Item text="20 KG" enabled="true" key="20 KG"/>
+                                                            <core:Item text="700 KG" enabled="true" key="700 KG"/>
+                                                            <core:Item text="1000 KG" enabled="true" key="1000 KG"/>
+                                                            <core:Item text="900 KG" enabled="true" key="900 KG"/>
+                                                            <core:Item text="1300 KG" enabled="true" key="1300 KG"/>
+                                                            <core:Item text="30 KG" enabled="true" key="30 KG"/>
+                                                            <core:Item text="450 KG" enabled="true" key="450 KG"/>
+                                                            <core:Item text="440 KG" enabled="true" key="440 KG"/>
+                                                            <core:Item text="600 KG" enabled="true" key="600 KG"/>
+                                                            <core:Item text="720 KG" enabled="true" key="720 KG"/>
+                                                            <core:Item text="480 KG" enabled="true" key="480 KG"/>
+                                                            <core:Item text="1150 KG" enabled="true" key="1150 KG"/>
+                                                            <core:Item text="1250 KG" enabled="true" key="1250 KG"/>
+                                                            <core:Item text="750 KG" enabled="true" key="750 KG"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                    <ComboBox  xmlns="sap.m" id="box4" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                            <core:Item text="Normal" enabled="true" key="Normal"/>
+                                                            <core:Item text="Dört Yönlü" enabled="true" key="Dört Yönlü"/>
+                                                            <core:Item text="Büyük Palet" enabled="true" key="Büyük Palet"/>
+                                                        	<core:Item text="Çift Yüzlü" enabled="true" key="Çift Yüzlü"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                    <ComboBox xmlns="sap.m" id="box5" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                            <core:Item text="1/2 Yarım Palet" enabled="true" key="1/2 Yarım Palet"/>
+                                                            <core:Item text="1 Tam Palet" enabled="true" key="1 Tam Palet"/>
+                                                            <core:Item text="Paletsiz" enabled="true" key="Paletsiz"/>
+                                                            <core:Item text="Sling Bag" enabled="true" key="Sling Bag"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Miktar" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <StepInput id="MiktartKonteyner" value="1" min="1" max="10" step="1" largerStep="2" displayValuePrecision="0" width="auto" valueState="None" editable="true" enabled="true" visible="true"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Konteyner Sayısı ve türü" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <StepInput value="1" min="1" max="10" step="1" largerStep="2" displayValuePrecision="0" width="auto" valueState="None" editable="true" enabled="true" visible="true"/>
+                                                    <ComboBox xmlns="sap.m" id="box6" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                            <core:Item text="20' FCL" enabled="true" key="20' FCL"/>
+                                                            <core:Item text="40' FCL" enabled="true" key="40' FCL"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Boşaltma Yeri" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox xmlns="sap.m" id="box7"  editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                            <core:Item text="FI" enabled="true" key="FI"/>
+                                                            <core:Item text="CR" enabled="true" key="CR"/>
+                                                            <core:Item text="MY" enabled="true" key="MY"/>
+                                                            <core:Item text="IN" enabled="true" key="IN"/>
+                                                            <core:Item text="SG" enabled="true" key="SG"/>
+                                                            <core:Item text="LU" enabled="true" key="LU"/>
+                                                            <core:Item text="RU" enabled="true" key="RU"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                    <ComboBox xmlns="sap.m" id="box8" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                             <core:Item text="Haydarpaşa" enabled="true" key="Haydarpaşa"/>
+                                                            <core:Item text="Yılport" enabled="true" key="Yılport"/>
+                                                            <core:Item text="Alsancak" enabled="true" key="Alsancak"/>
+                                                            <core:Item text="Evyap" enabled="true" key="Evyap"/>
+                                                            <core:Item text="Bandırma Limanı" enabled="true" key="Bandırma Limanı"/>
+                                                            <core:Item text="İstanbul Ambarlı Limanı" enabled="true" key="İstanbul Ambarlı Limanı"/>
+                                                            <core:Item text="İzmir Aliağa Limanı" enabled="true" key="İzmir Aliağa Limanı"/>
+                                                            <core:Item text="Gemlik" enabled="true" key="Gemlik"/>
+                                                            <core:Item text="CHANGSHA" enabled="true" key="CHANGSHA"/>
+                                                            <core:Item text="CHONGQING" enabled="true" key="CHONGQING"/>
+                                                            <core:Item text="DALIAN" enabled="true" key="DALIAN"/>
+                                                            <core:Item text="DANDONG" enabled="true" key="DANDONG"/>
+                                                            <core:Item text="JIU JIANG" enabled="true" key="JIU JIANG"/>
+                                                            <core:Item text="NANJING" enabled="true" key="NANJING"/>
+                                                            <core:Item text="NANSHA" enabled="true" key="NANSHA"/>
+                                                            <core:Item text="NANTONG" enabled="true" key="NANTONG"/>
+                                                            <core:Item text="SANSHUI" enabled="true" key="SANSHUI"/>
+                                                            <core:Item text="SHANGHAI" enabled="true" key="SHANGHAI"/>
+                                                            <core:Item text="SHEKOU" enabled="true" key="SHEKOU"/>
+                                                            <core:Item text="WUHAN" enabled="true" key="WUHAN"/>
+                                                            <core:Item text="XIAMEN" enabled="true" key="XIAMEN"/>
+                                                            <core:Item text="YICHANG" enabled="true" key="YICHANG"/>
+                                                            <core:Item text="İzmir Biçerova İstasyonu" enabled="true" key="İzmir Biçerova İstasyonu"/>
+                                                            <core:Item text="Bandırma L.Md. Liman Tes.Etibo" enabled="true" key="Bandırma L.Md. Liman Tes.Etibo"/>
+                                                            <core:Item text="Bandırma Etimaden Etibor-48 Rı" enabled="true" key="Bandırma Etimaden Etibor-48 Rı"/>
+                                                            <core:Item text="Bandırma Etimaden Cevher Rıhtı" enabled="true" key="Bandırma Etimaden Cevher Rıhtı"/>
+                                                            <core:Item text="FOB Bandırma Etimaden(Etibor48" enabled="true" key="FOB Bandırma Etimaden(Etibor48"/>
+                                                            <core:Item text="FOB Bandırma Etimaden(Etibor48" enabled="true" key="FOB Bandırma Etimaden(Etibor48"/>
+                                                            <core:Item text="Bandırma DDY İstasyonu" enabled="true" key="Bandırma DDY İstasyonu"/>
+                                                            <core:Item text="Kestelek Başmühendisliği" enabled="true" key="Kestelek Başmühendisliği"/>
+                                                            <core:Item text="Bandırma Lj.Md. İhraç Stok Sah" enabled="true" key="Bandırma Lj.Md. İhraç Stok Sah"/>
+                                                            <core:Item text="Asyaport" enabled="true" key="Asyaport"/>
+                                                            <core:Item text="İzmir" enabled="true" key="İzmir"/>
+                                                            <core:Item text="İstanbul" enabled="true" key="İstanbul"/>
+                                                            <core:Item text="İzmit" enabled="true" key="İzmit"/>
+                                                            <core:Item text="Bandırma" enabled="true" key="Bandırma"/>
+                                                            <core:Item text="SENDAI" enabled="true" key="SENDAI"/>
+                                                            <core:Item text="THAR DRY PORT" enabled="true" key="THAR DRY PORT"/>
+                                                            <core:Item text="HIROSHIMA" enabled="true" key="HIROSHIMA"/>
+                                                            <core:Item text="NHAVA SHEVA ICD JAIPUR" enabled="true" key="NHAVA SHEVA ICD JAIPUR"/>
+                                                            <core:Item text="NHAVA SHEVA ICD KANPUR" enabled="true" key="NHAVA SHEVA ICD KANPUR"/>
+                                                            <core:Item text="NHAVA SHEVA-ICD ANKL." enabled="true" key="NHAVA SHEVA-ICD ANKL."/>
+                                                            <core:Item text="NHAVA SHEVA ICD AGRA" enabled="true" key="NHAVA SHEVA ICD AGRA"/>
+                                                            <core:Item text="NHAVA SHEVA ICD AHMEDABAD" enabled="true" key="NHAVA SHEVA ICD AHMEDABAD"/>
+                                                            <core:Item text="NHAVA SHEVA ICD KHODIYAR" enabled="true" key="NHAVA SHEVA ICD KHODIYAR"/>
+                                                            <core:Item text="NHAVA SHEVA ICD LUDHIANA" enabled="true" key="NHAVA SHEVA ICD LUDHIANA"/>
+                                                            <core:Item text="NHAVA SHEVA ICD TUGH." enabled="true" key="NHAVA SHEVA ICD TUGH."/>
+                                                            <core:Item text="OAKLAND, CALIFORNIA" enabled="true" key="OAKLAND, CALIFORNIA"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Gemi Varış Tarih Aralığı" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <DatePicker id="date1" width="auto" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true" valueFormat="yyyyMMdd"/>
+                                                    <DatePicker id="date2" width="auto" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true" valueFormat="yyyyMMdd"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Taşıma Şekli" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox  xmlns="sap.m" id="box9" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                            <core:Item text="Palet" enabled="true" key="Palet"/>
+                                                            <core:Item text="Konteyner" enabled="true" key="Konteyner"/>
+                                                            <core:Item text="SİLİNECEK" enabled="true" key="SİLİNECEK"/>
+                                                            <core:Item text="Kiralanan Gemi" enabled="true" key="Kiralanan Gemi"/>
+                                                            <core:Item text="Tren" enabled="true" key="Tren"/>
+                                                            <core:Item text="Kamyon" enabled="true" key="Kamyon"/>
+                                                            <core:Item text="Silobas" enabled="true" key="Silobas"/>
+                                                            <core:Item text="Uçak" enabled="true" key="Uçak"/>
+                                                            <core:Item text="Torba" enabled="true" key="Torba"/>
+                                                            <core:Item text="Kantar tartımsız" enabled="true" key="Kantar tartımsız"/>
+                                                            <core:Item text="Sling bag" enabled="true" key="Sling bag"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                        </form:formElements>
+                                        <form:title/>
+                                    </form:FormContainer>
+                                </form:formContainers>
+                                <form:layout>
+                                    <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                                </form:layout>
+                            </form:Form>
+                        </content>
+                    </WizardStep>
+                    <WizardStep title="Talepler" icon="" validated="true">
+                        <content>
+                            <form:Form width="100%" editable="true" visible="true">
+                                <form:title/>
+                                <form:formContainers>
+                                    <form:FormContainer visible="true">
+                                        <form:formElements>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Markalama" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <RadioButtonGroup id="sap_Wizard_Page_0-content-sap_m_Wizard-1-steps-sap_m_WizardStep-1598706909817-content-build_simple_form_Form-1598708323263-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1-fields-sap_m_RadioButtonGroup-1598708399140" columns="8" selectedIndex="0" valueState="None" width="auto" editable="true" enabled="true" textDirection="LTR" select="_onRadioButtonGroupSelect">
+                                                        <buttons>
+                                                            <RadioButton text="Yok" editable="false" enabled="false" visible="false" width="auto" valueState="None" selected="false"/>
+                                                           
+                                                            <RadioButton text="Var" editable="true" enabled="true" visible="true" width="auto" valueState="None" selected="false"/>
+                                                            <RadioButton text="Yok" editable="true" enabled="true" visible="true" width="auto" valueState="None" selected="false"/>
+                                                        </buttons>
+                                                    </RadioButtonGroup>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="İlaçlama" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <RadioButtonGroup id="sap_Wizard_Page_0-content-sap_m_Wizard-1-steps-sap_m_WizardStep-1598706909817-content-build_simple_form_Form-1598708323263-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-3-fields-sap_m_RadioButtonGroup-1598708490211" columns="8" selectedIndex="0" valueState="None" width="auto" editable="true" enabled="true" textDirection="Inherit" select="_onRadioButtonGroupSelect1">
+                                                        <buttons>
+                                                            <RadioButton text="Yok" editable="false" enabled="false" visible="false" width="auto" valueState="None" selected="false"/>
+
+                                                            <RadioButton text="Var" editable="true" enabled="true" visible="true" width="auto" valueState="None" selected="false"/>
+                                                            <RadioButton text="Yok" editable="true" enabled="true" visible="true" width="auto" valueState="None" selected="false"/>
+                                                        </buttons>
+                                                    </RadioButtonGroup>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Gözetmen" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <RadioButtonGroup id="sap_Wizard_Page_0-content-sap_m_Wizard-1-steps-sap_m_WizardStep-1598706909817-content-build_simple_form_Form-1598708323263-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-4-fields-sap_m_RadioButtonGroup-1598708546577" columns="8" selectedIndex="0" valueState="None" width="auto" editable="true" enabled="true" textDirection="Inherit" select="_onRadioButtonGroupSelect2">
+                                                        <buttons>
+                                                            <RadioButton text="Yok" editable="false" enabled="false" visible="false" width="auto" valueState="None" selected="false"/>
+
+                                                            <RadioButton text="Var" editable="true" enabled="true" visible="true" width="auto" valueState="None" selected="false"/>
+                                                            <RadioButton text="Yok" editable="true" enabled="true" visible="true" width="auto" valueState="None" selected="false"/>
+                                                        </buttons>
+                                                    </RadioButtonGroup>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Konşimento Türü" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox xmlns="sap.m" id="box11" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                            <core:Item text="Marine" enabled="true" key="Marine"/>
+                                                            <core:Item text="Ocean" enabled="true" key="Ocean"/>
+                                                            <core:Item text="Seaway Bill of Lading" enabled="true" key="Seaway Bill of Lading"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                        </form:formElements>
+                                        <form:title/>
+                                    </form:FormContainer>
+                                </form:formContainers>
+                                <form:layout>
+                                    <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                                </form:layout>
+                            </form:Form>
+                        </content>
+                    </WizardStep>
+                    <WizardStep title="Belgeler" icon="" validated="true">
+                        <content>
+                            <form:Form width="100%" editable="true" visible="true">
+                                <form:title/>
+                                <form:formContainers>
+                                    <form:FormContainer visible="true">
+                                        <form:formElements>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Döküman Türü" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox xmlns="sap.m" id="box10" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                            <core:Item text="TICARI FATURA" enabled="true" key="TICARI FATURA"/>
+                                                            <core:Item text="MENŞE ŞAHADETNAMESI" enabled="true" key="MENŞE ŞAHADETNAMESI"/>
+                                                            <core:Item text="KONŞIMENTO" enabled="true" key="KONŞIMENTO"/>
+                                                            <core:Item text="BENEFICIARY CERTIFCATES (LEHDAR/YARARLANAN LEHINE DÜZENLENEN SERTIFIKALAR)" enabled="true" key="BENEFICIARY CERTIFCATES (LEHDAR/YARARLANAN LEHINE DÜZENLENEN SERTIFIKALAR)"/>
+                                                            <core:Item text="DRAFT (POLIÇE)" enabled="true" key="DRAFT (POLIÇE)"/>
+                                                            <core:Item text="ÇEKI/PAKETLEME LISTESI" enabled="true" key="ÇEKI/PAKETLEME LISTESI"/>
+                                                            <core:Item text="SERBEST DOLAŞIM BELGESI: ATR-1" enabled="true" key="SERBEST DOLAŞIM BELGESI: ATR-1"/>
+                                                            <core:Item text="SERBEST DOLAŞIM BELGESI: EUR-1" enabled="true" key="SERBEST DOLAŞIM BELGESI: EUR-1"/>
+                                                            <core:Item text="YÜKLEME BILGILENDIRMESI" enabled="true" key="YÜKLEME BILGILENDIRMESI"/>
+                                                            <core:Item text="ÜRÜN SPEKTLERI" enabled="true" key="ÜRÜN SPEKTLERI"/>
+                                                            <core:Item text="ÜRÜN ANALIZ SERTIFIKASI" enabled="true" key="ÜRÜN ANALIZ SERTIFIKASI"/>
+                                                            <core:Item text="MSDS - MALZEME GÜVENLIK BILGI FORMU" enabled="true" key="MSDS - MALZEME GÜVENLIK BILGI FORMU"/>
+                                                            <core:Item text="KALITE BELGESI" enabled="true" key="KALITE BELGESI"/>
+                                                            <core:Item text="SIGORTA POLIÇESI" enabled="true" key="SIGORTA POLIÇESI"/>
+                                                            <core:Item text="FÜMIGASYON SERTIFIKASI" enabled="true" key="FÜMIGASYON SERTIFIKASI"/>
+                                                            <core:Item text="GÖZETMEN RAPORU" enabled="true" key="GÖZETMEN RAPORU"/>
+                                                            <core:Item text="ACENTE SERTIFIKASI" enabled="true" key="ACENTE SERTIFIKASI"/>
+                                                            <core:Item text="MASTER/MATE RECEIPT (GEMI KAPTANI ALINDI BELGESI)" enabled="true" key="MASTER/MATE RECEIPT (GEMI KAPTANI ALINDI BELGESI)"/>
+                                                            <core:Item text="NOTICE OF READINESS" enabled="true" key="NOTICE OF READINESS"/>
+                                                            <core:Item text="STATEMENT OF FACT" enabled="true" key="STATEMENT OF FACT"/>
+                                                            <core:Item text="DRAFT SURVEY RAPORU" enabled="true" key="DRAFT SURVEY RAPORU"/>
+                                                            <core:Item text="LAYTIME SHEET" enabled="true" key="LAYTIME SHEET"/>
+                                                            <core:Item text="KARGO PLANI" enabled="true" key="KARGO PLANI"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Kopya Adedi" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <StepInput id ="kopyasay" value="0" min="0" max="10" step="1" largerStep="2" displayValuePrecision="0" width="auto" valueState="None" editable="true" enabled="true" visible="true"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Açıklama" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <TextArea id = "aciklama" rows="2" cols="20" maxLength="0" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Button text="Ekle" type="Default" icon="sap-icon://add" iconFirst="true" width="297.98828125px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                        </form:formElements>
+                                        <form:title/>
+                                    </form:FormContainer>
+                                </form:formContainers>
+                                <form:layout>
+                                    <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                                </form:layout>
+                            </form:Form>
+                        </content>
+                    </WizardStep>
+                    <WizardStep title="Ödeme Bilgileri" icon="" validated="true">
+                        <content>
+                            <form:Form width="100%" editable="true" visible="true">
+                                <form:title/>
+                                <form:formContainers>
+                                    <form:FormContainer visible="true">
+                                        <form:formElements>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Para Birimi" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox xmlns="sap.m" id="box13" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                        <core:Item text="TL" enabled="true" key="TL"/>
+                                                            <core:Item text="EUR" enabled="true" key="EUR"/>
+                                                            <core:Item text="USD" enabled="true" key="USD"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Ödeme Şekli" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox xmlns="sap.m" id="box12" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                            <core:Item text="Peşin" enabled="true" key="Peşin"/>
+                                                            <core:Item text="Mİ int.müteakip 5.gün" enabled="true" key="Mİ int.müteakip 5.gün"/>
+                                                            <core:Item text="10 gün vadeli işlemler" enabled="true" key="10 gün vadeli işlemler"/>
+                                                            <core:Item text="15 gün vadeli işlemler" enabled="true" key="15 gün vadeli işlemler"/>
+                                                            <core:Item text="30 gün vadeli işlemler" enabled="true" key="30 gün vadeli işlemler"/>
+                                                            <core:Item text="45 gün vadeli işlemler" enabled="true" key="45 gün vadeli işlemler"/>
+                                                            <core:Item text="60 gün vadeli işlemler" enabled="true" key="60 gün vadeli işlemler"/>
+                                                            <core:Item text="90 gün vadeli işlemler" enabled="true" key="90 gün vadeli işlemler"/>
+                                                            <core:Item text="Sözleşmeli Peşin" enabled="true" key="Sözleşmeli Peşin"/>
+                                                            <core:Item text="Mİ int.itibaren 5.gün" enabled="true" key="Mİ int.itibaren 5.gün"/>
+                                                            <core:Item text="Vesaik Mukabili –Vadeli" enabled="true" key="Vesaik Mukabili –Vadeli"/>
+                                                            <core:Item text="75 gün vadeli işlemler" enabled="true" key="75 gün vadeli işlemler"/>
+                                                            <core:Item text="120 gün vadeli işlemler" enabled="true" key="120 gün vadeli işlemler"/>
+                                                            <core:Item text="150 gün vadeli işlemler" enabled="true" key="150 gün vadeli işlemler"/>
+                                                            <core:Item text="180 gün vadeli işlemler" enabled="true" key="180 gün vadeli işlemler"/>
+                                                            <core:Item text="Mİ.int.itibaren 7. gün" enabled="true" key="Mİ.int.itibaren 7. gün"/>
+                                                            <core:Item text="Vesaik Mukabili – Vadesiz" enabled="true" key="Vesaik Mukabili – Vadesiz"/>
+                                                            <core:Item text="Mal Mukabili - 15 Gün Vadeli" enabled="true" key="Mal Mukabili - 15 Gün Vadeli"/>
+                                                            <core:Item text="Mal Mukabili – 30 gün Vadeli" enabled="true" key="Mal Mukabili – 30 gün Vadeli"/>
+                                                            <core:Item text="Mal Mukabili – 45 gün Vadeli" enabled="true" key="Mal Mukabili – 45 gün Vadeli"/>
+                                                            <core:Item text="Mal Mukabili – 60 gün Vadeli" enabled="true" key="Mal Mukabili – 60 gün Vadeli"/>
+                                                            <core:Item text="Mal Mukabili – 90 gün Vadeli" enabled="true" key="Mal Mukabili – 90 gün Vadeli"/>
+                                                            <core:Item text="Mal Mukabili – 120 gün Vadeli" enabled="true" key="Mal Mukabili – 120 gün Vadeli"/>
+                                                            <core:Item text="Mal Mukabili – 150 gün Vadeli" enabled="true" key="Mal Mukabili – 150 gün Vadeli"/>
+                                                            <core:Item text="Mal Mukabili – 180 gün Vadeli" enabled="true" key="Mal Mukabili – 180 gün Vadeli"/>
+                                                            <core:Item text="Mal Mukabili  – 200 gün Vadeli" enabled="true" key="Mal Mukabili  – 200 gün Vadeli"/>
+                                                            <core:Item text="Mal Mukabili  – 75 gün Vadeli" enabled="true" key="Mal Mukabili  – 75 gün Vadeli"/>
+                                                            <core:Item text="Mal Mukabili – 25 gün Vadeli" enabled="true" key="Mal Mukabili – 25 gün Vadeli"/>
+                                                            <core:Item text="Mal mukabili – Vadesiz" enabled="true" key="Mal mukabili – Vadesiz"/>
+                                                            <core:Item text="Mal Mukabili – 7 gün Vadeli" enabled="true" key="Mal Mukabili – 7 gün Vadeli"/>
+                                                            <core:Item text="21 gün vadeli işlemler" enabled="true" key="21 gün vadeli işlemler"/>
+                                                            <core:Item text="Mal Mukabili – 20 gün Vadeli" enabled="true" key="Mal Mukabili – 20 gün Vadeli"/>
+                                                            <core:Item text="Akreditif – 30 gün Vadeli" enabled="true" key="Akreditif – 30 gün Vadeli"/>
+                                                            <core:Item text="Akreditif – 45 gün Vadeli" enabled="true" key="Akreditif – 45 gün Vadeli"/>
+                                                            <core:Item text="Akreditif – 60 gün Vadeli" enabled="true" key="Akreditif – 60 gün Vadeli"/>
+                                                            <core:Item text="Akreditif – 90 gün Vadeli" enabled="true" key="Akreditif – 90 gün Vadeli"/>
+                                                            <core:Item text="Akreditif – 120 gün Vadeli" enabled="true" key="Akreditif – 120 gün Vadeli"/>
+                                                            <core:Item text="Akreditif – 150 gün Vadeli" enabled="true" key="Akreditif – 150 gün Vadeli"/>
+                                                            <core:Item text="Akreditif – 180 gün Vadeli" enabled="true" key="Akreditif – 180 gün Vadeli"/>
+                                                            <core:Item text="Akreditif – 200 gün Vadeli" enabled="true" key="Akreditif – 200 gün Vadeli"/>
+                                                            <core:Item text="Akreditif – 75 gün Vadeli" enabled="true" key="Akreditif – 75 gün Vadeli"/>
+                                                            <core:Item text="Teyitli Akreditif At sight" enabled="true" key="Teyitli Akreditif At sight"/>
+                                                            <core:Item text="Akreditif - Standby" enabled="true" key="Akreditif - Standby"/>
+                                                            <core:Item text="Akreditif – RedClose" enabled="true" key="Akreditif – RedClose"/>
+                                                            <core:Item text="FİRMA L/C" enabled="true" key="FİRMA L/C"/>
+                                                            <core:Item text="ETİBANK TEMLİK" enabled="true" key="ETİBANK TEMLİK"/>
+                                                            <core:Item text="Akreditif at sight" enabled="true" key="Akreditif at sight"/>
+                                                            <core:Item text="Vesaik Mukabili – 30 gün Vadeli" enabled="true" key="Vesaik Mukabili – 30 gün Vadeli"/>
+                                                            <core:Item text="Vesaik Mukabili –45 gün Vadeli" enabled="true" key="Vesaik Mukabili –45 gün Vadeli"/>
+                                                            <core:Item text="Vesaik Mukabili – 60 gün Vadeli" enabled="true" key="Vesaik Mukabili – 60 gün Vadeli"/>
+                                                            <core:Item text="Vesaik Mukabili – 90 gün Vadeli" enabled="true" key="Vesaik Mukabili – 90 gün Vadeli"/>
+                                                            <core:Item text="Vesaik Mukabili – 120 gün Vadeli" enabled="true" key="Vesaik Mukabili – 120 gün Vadeli"/>
+                                                            <core:Item text="Vesaik Mukabili – 150 gün Vadeli" enabled="true" key="Vesaik Mukabili – 150 gün Vadeli"/>
+                                                            <core:Item text="Vesaik Mukabili – 180 gün Vadeli" enabled="true" key="Vesaik Mukabili – 180 gün Vadeli"/>
+                                                            <core:Item text="Vesaik Mukabili – 200 gün Vadeli" enabled="true" key="Vesaik Mukabili – 200 gün Vadeli"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Fatura Firması" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input id="faturaFirma" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Alıcı Firma" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input id="aliciFirma" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="İhbar Firma 1" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input id="sap_Wizard_Page_0-content-sap_m_Wizard-1-steps-sap_m_WizardStep-1598706915215-content-build_simple_form_Form-1598708975550-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1598709253672-fields-sap_m_Input-1598709277254" type="Tel" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="true" valueStateText="İhbar Numarası Giriniz" maxLength="0"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="İhbar Firma 2" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input id="sap_Wizard_Page_0-content-sap_m_Wizard-1-steps-sap_m_WizardStep-1598706915215-content-build_simple_form_Form-1598708975550-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1598709254494-fields-sap_m_Input-1598709341215" type="Tel" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="true" valueStateText="Invalid entry" maxLength="0"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Ek Açıklama" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <TextArea id="ekaciklama" rows="2" cols="20" maxLength="0" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                        </form:formElements>
+                                        <form:title/>
+                                    </form:FormContainer>
+                                </form:formContainers>
+                                <form:layout>
+                                    <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                                </form:layout>
+                            </form:Form>
+                        </content>
+                    </WizardStep>
+                </steps>
+            </Wizard>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Button text="İptal" type="Reject" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        
+        <headerContent/>
+    </Page>
+</mvc:View>

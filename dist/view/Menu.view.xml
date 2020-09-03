@@ -1,0 +1,56 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.etiMaden.controller.Menu" xmlns="sap.m" xmlns:layout="sap.ui.commons.layout">
+    <Page showHeader="true" title="ETI MADEN" showFooter="false" showNavButton="true" enableScrolling="false" navButtonPress="_onPageNavButtonPress">
+        <content>
+            <layout:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
+                <layout:positions>
+                    <layout:PositionContainer left="535px" top="593.01171875px">
+                        <layout:control>
+                            <Button text="İletişim" type="Default" icon="sap-icon://email" iconFirst="true" width="210px" enabled="true" visible="true" iconDensityAware="false" class="sapUiResponsiveMargin" press="_onButtonPress"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="535px" top="161.01171875px">
+                        <layout:control>
+                            <Button text="Siparişlerim" type="Default" icon="sap-icon://order-status" iconFirst="true" width="210px" enabled="true" visible="true" iconDensityAware="false" class="sapUiResponsiveMargin" press="_onButtonPress1"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="535px" top="220.01388549804688px">
+                        <layout:control>
+                            <Button text="Kontratlı Sipariş Talebi" type="Default" icon="sap-icon://my-sales-order" iconFirst="true" width="210px" enabled="true" visible="true" iconDensityAware="false" class="sapUiResponsiveMargin" press="_onButtonPress2"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="534px" top="348.01171875px">
+                        <layout:control>
+                            <Button text="Kontratsız Sipariş Talebi" type="Default" icon="sap-icon://sales-order-item" iconFirst="true" width="210px" enabled="true" visible="true" iconDensityAware="false" class="sapUiResponsiveMargin" press="_onButtonPress3"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="535px" top="440.0138854980469px">
+                        <layout:control>
+                            <Button text="Bilgilerim" type="Default" icon="sap-icon://my-view" iconFirst="true" width="210px" enabled="true" visible="true" iconDensityAware="false" class="sapUiResponsiveMargin" press="_onButtonPress4"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                </layout:positions>
+            </layout:AbsoluteLayout>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Button text="Save" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent>
+            <Button text="Sepet" type="Emphasized" icon="sap-icon://basket" iconFirst="true" width="100px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress5"/>
+            <Button text="Çıkış" type="Reject" iconFirst="true" width="100px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress6"/>
+        </headerContent>
+        <subHeader>
+            <OverflowToolbar visible="true" enabled="true" width="auto" design="Transparent">
+                <content>
+                    <Text text="Sn." width="1237.00000000px" maxLines="1" wrapping="false" textAlign="Center" textDirection="Inherit" visible="true" class="sapUiResponsiveMargin"/>
+                </content>
+            </OverflowToolbar>
+        </subHeader>
+        <customHeader/>
+    </Page>
+</mvc:View>

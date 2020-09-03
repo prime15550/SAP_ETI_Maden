@@ -1,0 +1,26 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.etiMaden.controller.StartPage_1" xmlns="sap.m">
+    <Page showHeader="true" title="ETI MADEN" showFooter="true" showNavButton="false">
+        <content>
+            <Carousel height="400px" width="100%" loop="true" showPageIndicator="true" pageIndicatorPlacement="Bottom" visible="true" class="sapUiContentPadding">
+                <pages>
+                    <Image src="/webapp/resources/etimaden.png" height="342.36px" width="1280px" visible="true" densityAware="false"/>
+                    <Image src="/webapp/resources/2.jpg" height="342.36px" width="1280px" visible="true" densityAware="false"/>
+                    <Image src="/webapp/resources/slider2.jpg" height="384px" width="1280px" visible="true" densityAware="false"/>
+                    <Image src="/webapp/resources/isletme_slider-1-1.jpg" height="384px" width="1280px" visible="true" densityAware="false"/>
+                    <Image src="/webapp/resources/bMpeQIjpsd0ZDkDWRUk5.jpg" height="342.36px" width="1280px" visible="true" densityAware="false"/>
+                </pages>
+            </Carousel>
+            <OverflowToolbar width="auto" height="295.00000000px" design="Transparent" visible="true" enabled="true">
+                <content>
+                    <Button text="Giriş" type="Accept" iconFirst="true" width="334.00000000px" enabled="true" visible="true" iconDensityAware="false" class="sapUiResponsiveMargin" press="_onButtonPress"/>
+                    <ToolbarSpacer width=""/>
+                    <Button text="Kayıt Ol" type="Accept" iconFirst="true" width="335.00000000px" enabled="true" visible="true" iconDensityAware="false" class="sapUiResponsiveMargin" press="_onButtonPress1"/>
+                </content>
+            </OverflowToolbar>
+        </content>
+        <footer/>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>

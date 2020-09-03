@@ -1,0 +1,212 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.etiMaden.controller.OrderPage" xmlns="sap.m" xmlns:layout="sap.ui.layout">
+    <Page showHeader="true" title="ETI MADEN" showFooter="false" showNavButton="true" navButtonPress="_onPageNavButtonPress">
+        <content>
+            <Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Button text="Siparisleri Yükle" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+                    <Input id="ss1" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="50"/>
+                </content>
+            </Toolbar>
+            <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin">
+                <infoToolbar>
+                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                        <content>
+                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </content>
+                    </Toolbar>
+                </infoToolbar>
+                <headerToolbar>
+                    <OverflowToolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">
+                        <content>
+                            <Title text="Siparişlerim" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+                            <ToolbarSpacer width=""/>
+                            <OverflowToolbarButton text="Sort" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                            <OverflowToolbarButton text="Filter" type="Transparent" icon="sap-icon://filter" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                            <OverflowToolbarButton text="Group" type="Transparent" icon="sap-icon://group-2" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                        </content>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                        <header>
+                            <Text text="Referans No" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </header>
+                        <footer/>
+                    </Column>
+                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                        <header>
+                            <Text text="Sipariş No" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </header>
+                        <footer/>
+                    </Column>
+                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                        <header>
+                            <Text text="Sipariş Tarihi" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </header>
+                        <footer/>
+                    </Column>
+                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                        <header>
+                            <Text text="Ürün" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </header>
+                        <footer/>
+                    </Column>
+                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                        <header>
+                            <Text text="Miktar" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </header>
+                        <footer/>
+                    </Column>
+                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                        <header>
+                            <Text text="Sevkiyat Miktarı" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </header>
+                        <footer/>
+                    </Column>
+                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                        <header>
+                            <Text text="Sevkiyat Tarihi" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </header>
+                        <footer/>
+                    </Column>
+                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                        <header>
+                            <Text text="Durum" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                        </header>
+                        <footer/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem type="Active" press="_onRowPress">
+                        <cells>
+                            <Input id="referansNo" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>          
+                            <Input id="SiparisNo" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+                            <Input id="SiparisTarihi" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+                            <Input id="urun" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+                            <Input id="miktar" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/> 
+                            <Input id="sevkiyatmiktar" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+                            <Input id="sevkiyatTarihi" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+                            <Input id="durum" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+
+
+
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                        </cells>
+                    </ColumnListItem>
+                    <ColumnListItem type="Active" press="_onRowPress1">
+                        <cells>
+                            <Input id="referansNo1" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>          
+                            <Input id="SiparisNo1" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+                            <Input id="SiparisTarihi1" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+                            <Input id="urun1" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+                            <Input id="miktar1" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/> 
+                            <Input id="sevkiyatmiktar1" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+                            <Input id="sevkiyatTarihi1" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+                            <Input id="durum1" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+
+
+
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                        </cells>
+                    </ColumnListItem>
+                    <ColumnListItem type="Active" press="_onRowPress2">
+                        <cells>
+                            <Input id="referansNo2" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>          
+                            <Input id="SiparisNo2" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+                            <Input id="SiparisTarihi2" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+                            <Input id="urun2" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+                            <Input id="miktar2" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/> 
+                            <Input id="sevkiyatmiktar2" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+                            <Input id="sevkiyatTarihi2" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+                            <Input id="durum2" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="5000"/>                               
+
+
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                            <layout:HorizontalLayout>
+                                <layout:content/>
+                            </layout:HorizontalLayout>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <OverflowToolbarButton text="Action" type="Transparent" icon="sap-icon://action" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>

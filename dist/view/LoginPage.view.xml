@@ -1,0 +1,60 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"  xmlns:html="http://www.w3.org/1999/xhtml"  controllerName="com.sap.build.standard.etiMaden.controller.LoginPage"  xmlns="sap.m" xmlns:form="sap.ui.layout.form">
+    <Page showHeader="true" title="ETI MADEN" showFooter="true" showNavButton="true" navButtonPress="_onPageNavButtonPress">
+        <content>
+            <Carousel height="400px" width="100%" loop="true" showPageIndicator="true" pageIndicatorPlacement="Bottom" visible="true" class="sapUiContentPadding">
+                <pages>
+                    <Image src="/webapp/resources/etimaden.png" height="342.36px" width="1280px" visible="true" densityAware="false"/>
+                    <Image src="/webapp/resources/2.jpg" height="342.36px" width="1280px" visible="true" densityAware="false"/>
+                    <Image src="/webapp/resources/slider2.jpg" height="384px" width="1280px" visible="true" densityAware="false"/>
+                    <Image src="/webapp/resources/isletme_slider-1-1.jpg" height="384px" width="1280px" visible="true" densityAware="false"/>
+                    <Image src="/webapp/resources/bMpeQIjpsd0ZDkDWRUk5.jpg" height="342.36px" width="1280px" visible="true" densityAware="false"/>
+                </pages>
+            </Carousel>
+            <form:Form width="auto" editable="true" visible="true" class="sapUiResponsiveMargin">
+                <form:title/>
+                <form:formContainers>
+                    <form:FormContainer visible="true">
+                        <form:formElements>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Kullancı Adı" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <Input id="username" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="true" valueStateText="Kullanıcı Adını Giriniz" maxLength="0"/>
+                                </form:fields>
+                            </form:FormElement>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Şifre" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <Input id="password" type="Password" description="" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="true" valueStateText="Şifreyi Giriniz" maxLength="0"/>
+                                </form:fields>
+                            </form:FormElement>
+                        </form:formElements>
+                        <form:title/>
+                    </form:FormContainer>
+                </form:formContainers>
+                <form:layout>
+                    <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                </form:layout>
+            </form:Form>
+            
+            
+            <OverflowToolbar width="auto" height="46px" design="Auto" enabled="true" visible="true" class="sapUiResponsiveMargin">
+                  
+                <content>
+                    <ToolbarSpacer width=""/>
+                    
+                    <Button text="Giriş" type="Emphasized" iconFirst="true" width="86.9921875px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                    <Button text="İptal" type="Reject" iconFirst="true" width="87px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+                </content>
+            </OverflowToolbar>
+        </content>
+        <footer/>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>
+

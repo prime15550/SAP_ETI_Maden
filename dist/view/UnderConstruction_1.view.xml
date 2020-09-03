@@ -1,0 +1,19 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.etiMaden.controller.UnderConstruction_1" xmlns="sap.m">
+    <Page showHeader="true" title="Under Construction" showFooter="false" showNavButton="true" navButtonPress="_onPageNavButtonPress">
+        <content>
+            <Image src="/webapp/resources/website-under-construction-landing-page-vector-20519213.jpg" height="999px" width="1280px" visible="true" densityAware="false" class="sapUiResponsiveMargin"/>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Button text="Save" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>

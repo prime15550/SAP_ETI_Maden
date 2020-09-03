@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" controllerName="com.sap.build.standard.etiMaden.controller.Dialog1" xmlns="sap.m">
+    <Dialog horizontalScrolling="true" showHeader="true" state="None" stretch="false" title="Sepete Eklendi" type="Standard" verticalScrolling="true">
+        <content/>
+        <beginButton/>
+        <buttons>
+            <Button text="Sepete Git" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press = "button1"/>
+            <Button text="Menu" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press = "button2"/>
+        </buttons>
+        <customHeader/>
+        <endButton/>
+        <subHeader/>
+    </Dialog>
+</core:FragmentDefinition>

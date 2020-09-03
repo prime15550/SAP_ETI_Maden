@@ -1,0 +1,45 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.etiMaden.controller.StartPage" xmlns="sap.m" xmlns:layout="sap.ui.commons.layout">
+    <Page showHeader="true" title="ETI MADEN" showFooter="false" showNavButton="false" enableScrolling="false">
+        <content>
+            <layout:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
+                <layout:positions>
+                    <layout:PositionContainer left="0px" top="9.01171875px">
+                        <layout:control>
+                            <Carousel height="400px" width="100%" loop="true" showPageIndicator="true" pageIndicatorPlacement="Bottom" visible="true" class="sapUiContentPadding">
+                                <pages>
+                                    <Image src="/webapp/resources/etimaden.png" height="342.36px" width="1280px" visible="true" densityAware="false"/>
+                                    <Image src="/webapp/resources/2.jpg" height="342.36px" width="1280px" visible="true" densityAware="false"/>
+                                    <Image src="/webapp/resources/slider2.jpg" height="384px" width="1280px" visible="true" densityAware="false"/>
+                                    <Image src="/webapp/resources/isletme_slider-1-1.jpg" height="384px" width="1280px" visible="true" densityAware="false"/>
+                                    <Image src="/webapp/resources/bMpeQIjpsd0ZDkDWRUk5.jpg" height="342.36px" width="1280px" visible="true" densityAware="false"/>
+                                </pages>
+                            </Carousel>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="441px" top="448.01171875px">
+                        <layout:control>
+                            <Button text="Giriş" type="Default" iconFirst="true" width="334.00000000px" enabled="true" visible="true" iconDensityAware="false" class="sapUiResponsiveMargin" press="_onButtonPress"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                    <layout:PositionContainer left="440px" top="535.01171875px">
+                        <layout:control>
+                            <Button text="Kayıt Ol" type="Default" iconFirst="true" width="335.00000000px" enabled="true" visible="true" iconDensityAware="false" class="sapUiResponsiveMargin" press="_onButtonPress1"/>
+                        </layout:control>
+                    </layout:PositionContainer>
+                </layout:positions>
+            </layout:AbsoluteLayout>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Button text="Save" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>

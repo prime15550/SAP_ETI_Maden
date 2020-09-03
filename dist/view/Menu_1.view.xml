@@ -1,0 +1,48 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.etiMaden.controller.Menu_1" xmlns="sap.m" data-sap-ui-async="true">
+    <Page showHeader="true" title="ETI MADEN" showFooter="true" showNavButton="true" navButtonPress="_onPageNavButtonPress">
+        <content>
+            <OverflowToolbar width="auto" height="222px" design="Transparent" visible="true" enabled="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                </content>
+            </OverflowToolbar>
+            <OverflowToolbar width="auto" height="177px" design="Transparent" visible="true" enabled="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Button text="Siparişlerim" type="Emphasized" icon="sap-icon://order-status" iconFirst="true" width="210px" enabled="true" visible="true" iconDensityAware="false" class="sapUiResponsiveMargin" press="_onButtonPress"/>
+                    <ToolbarSpacer width=""/>
+                    <Button text="Bilgilerim" type="Emphasized" icon="sap-icon://my-view" iconFirst="true" width="210px" enabled="true" visible="true" iconDensityAware="false" class="sapUiResponsiveMargin" press="_onButtonPress1"/>
+                    <ToolbarSpacer width=""/>
+                    <Button text="İletişim" type="Emphasized" icon="sap-icon://email" iconFirst="true" width="210px" enabled="true" visible="true" iconDensityAware="false" class="sapUiResponsiveMargin" press="_onButtonPress2"/>
+                    <ToolbarSpacer width=""/>
+                </content>
+            </OverflowToolbar>
+            <OverflowToolbar width="auto" height="208px" design="Transparent" visible="true" enabled="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Button text="Kontratlı Sipariş Talebi" type="Emphasized" icon="sap-icon://my-sales-order" iconFirst="true" width="210px" enabled="true" visible="true" iconDensityAware="false" class="sapUiResponsiveMargin" press="_onButtonPress3"/>
+                    <ToolbarSpacer width=""/>
+                    <Button text="Kontratsız Sipariş Talebi" type="Emphasized" icon="sap-icon://sales-order-item" iconFirst="true" width="210px" enabled="true" visible="true" iconDensityAware="false" class="sapUiResponsiveMargin" press="_onButtonPress4"/>
+                    <ToolbarSpacer width=""/>
+                </content>
+            </OverflowToolbar>
+        </content>
+        <footer/>
+        <headerContent>
+            <Button text="SEPET" type="Emphasized" icon="sap-icon://basket" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress5"/>
+            <Button text="Çıkış" type="Reject" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress6"/>
+        </headerContent>
+        <subHeader>
+            <OverflowToolbar visible="true" enabled="true" width="auto" design="Transparent">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Input id="ss1" type="Text"  showValueHelp="false"  enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="50"/>
+
+
+                  
+                </content>
+            </OverflowToolbar>
+        </subHeader>
+        <customHeader/>
+    </Page>
+</mvc:View>
