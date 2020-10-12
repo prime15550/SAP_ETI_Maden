@@ -1,5 +1,8 @@
 # SAP_ETI_Maden
 Project Language is Turkish
+
+
+
 https://sap-project-eti.herokuapp.com/ is live server of this project
 username = tuncgursoy@hotmail.com 
 password = 123456 
